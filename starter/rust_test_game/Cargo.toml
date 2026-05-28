@@ -1,0 +1,9 @@
+[package]
+name = "rust_test_game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+my_game_engine = { path = "../my_game_engine" }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }

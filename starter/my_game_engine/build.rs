@@ -1,0 +1,12 @@
+fn main() {
+    println!("cargo:rerun-if-changed=opengl_wrapper_lib/opengl_wrapper_lib.c");
+    println!("cargo:rerun-if-changed=opengl_wrapper_lib/opengl_wrapper_lib.h");
+
+    cc::Build::new()
+        .file("opengl_wrapper_lib/opengl_wrapper_lib.c")
+        .include("opengl_wrapper_lib")
+        .compile("openglwrapper");
+
+    println!("cargo:rustc-link-lib=glfw");
+    println!("cargo:rustc-link-lib=GL");
+}

@@ -1,12 +1,16 @@
-# Ignore IDE specific files
+# Rust build outputs
+target/
+**/target/
+
+# C build outputs
+starter/c_output/
+
+# Editor and OS files
+.vscode/
 .idea/
+.DS_Store
+Thumbs.db
 
-# Ignores all object files and shared libraries
-*.o
-*.so
-
-# Ingore test_game executable
-project/solution/c_output/test_game_exe
-
-# Ignore Rust target directory
-**target/
+# Temporary files
+*.log
+*.tmp
